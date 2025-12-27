@@ -1,0 +1,87 @@
+/* Updated global styles for modern design */
+@import "tailwindcss";
+
+:root {
+  --background: #f9f9f9;
+  --foreground: #333333;
+  --primary: #0070f3;
+  --secondary: #801a80;
+  --accent: #000000;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  --surface-nav: #f0f0f0;
+  --surface-hover: #e5e5e5;
+  --border-subtle: #d1d5db;
+  --surface-card: #ffffff;
+  --surface-card-hover: #f3f4f6;
+  --surface-button: #cacaca;
+  --surface-button-hover: #dfdfdf;
+  --text-muted: #6b7280;
+}
+
+html.dark {
+  --background: #121212;
+  --foreground: #e4e4e4;
+  --primary: #3ea6ff;
+  --secondary: #fff828;
+  --accent: #2d3748;
+  --surface-nav: #1a1a1a;
+  --surface-hover: #2a2a2a;
+  --border-subtle: #2f2f2f;
+  --surface-card: #272727;
+  --surface-card-hover: #333333;
+  --surface-button: #2a2a2a;
+  --surface-button-hover: #a69528;
+  --text-muted: #9ca3af;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--foreground);
+  margin: 0;
+  font-weight: 600;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: var(--secondary);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
