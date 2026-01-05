@@ -17,6 +17,16 @@ export default async function ProjectDetailsPage({ params }: { params: Promise<{
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>{project.title}</h1>
+      {project.link && (
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.linkButton}
+        >
+          View Website
+        </a>
+      )}
       <p className={styles.description}>{project.overview}</p>
 
       <div className={styles.gallery}>

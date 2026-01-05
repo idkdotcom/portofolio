@@ -26,6 +26,11 @@ export default function ProjectCard({ project }: Props) {
             View Repo
           </a>
         )}
+        {project.link && (
+          <a href={project.link} target="_blank" className={styles.button}>
+            View Website
+          </a>
+        )}
         <Link href={`/projects/${project.slug}`} className={styles.button}>
           Details
         </Link>

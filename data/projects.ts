@@ -10,9 +10,37 @@ export type Project = {
   learnings: string[];
   reflection?: string;
   images: string[]; // Added array of image URLs for project photos
+  link?: string;
 };
 
 export const projects: Project[] = [
+  {
+    id: "4",
+    slug: "workout-tracker",
+    title: "Workout Tracker",
+    platform: "Web",
+    tech: ["Next.js", "PostgreSQL", "Google Flash 2 AI"],
+    overview:
+      "A comprehensive workout tracking application powered by Next.js and PostgreSQL. Features an AI assistant using Google Flash 2.0 to provide intelligent insights and recommendations.",
+    features: [
+      "AI-powered workout assistant",
+      "Interactive progress charts with customizable timeframes",
+      "Detailed workout logging",
+      "User progress tracking",
+    ],
+    learnings: [
+      "Integrating LLMs for practical user assistance",
+      "Data visualization with complex time-series data",
+      "Building scalable schemas with PostgreSQL",
+    ],
+    images: [
+      "/images/workout-tracker-1.png",
+      "/images/workout-tracker-2.png",
+      "/images/workout-tracker-3.png",
+      "/images/workout-tracker-4.png",
+    ],
+    link: "https://workout-tracker-by-bryan.vercel.app/",
+  },
   {
     id: "1", // Unique ID for the project
     slug: "gym-app-mockup",
