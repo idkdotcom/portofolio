@@ -37,7 +37,6 @@ export const projects: Project[] = [
       "/images/workout-tracker-1.png",
       "/images/workout-tracker-2.png",
       "/images/workout-tracker-3.png",
-      "/images/workout-tracker-4.png",
     ],
     link: "https://workout-tracker-by-bryan.vercel.app/",
   },
