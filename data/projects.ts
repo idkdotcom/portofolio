@@ -41,6 +41,29 @@ export const projects: Project[] = [
     link: "https://workout-tracker-by-bryan.vercel.app/",
   },
   {
+    id: "5",
+    slug: "catparade",
+    title: "CatParade",
+    platform: "Web",
+    tech: ["React", "Node.js", "Supabase"],
+    overview:
+      "Web-based daily game inspired by higher/lower mechanics. Players compare two cat images and choose which one has a higher popularity score.",
+    features: [
+      "Interactive gameplay with real-time score updates",
+      "Interesting UI with cat images and popularity scores",
+    ],
+    learnings: [
+      "React state management for interactive games",
+      "Music and sound effects enhance user engagement",
+      "Supabase for real-time data storage and retrieval",
+    ],
+    images: [
+      "/images/catparade-1.png",
+      "/images/catparade-2.png",
+    ],
+    link: "https://catparade.vercel.app/",
+  },
+  {
     id: "1", // Unique ID for the project
     slug: "gym-app-mockup",
     title: "Gym App Mockup",
