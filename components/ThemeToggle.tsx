@@ -1,20 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function ThemeToggle() {
-  const [mounted, setMounted] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    if (typeof window === "undefined") return "dark";
 
-  useEffect(() => {
-    setMounted(true);
     const stored = localStorage.getItem("theme") as "light" | "dark" | null;
     const initial = stored ?? "dark";
-    setTheme(initial);
     document.documentElement.classList.toggle("dark", initial === "dark");
-  }, []);
 
-  if (!mounted) return null;
+    return initial;
+  });
 
   function toggleTheme() {
     const next = theme === "light" ? "dark" : "light";
@@ -24,7 +21,11 @@ export default function ThemeToggle() {
   }
 
   return (
-    <button onClick={toggleTheme} aria-label="Toggle theme">
+    <button
+      onClick={toggleTheme}
+      aria-label="Toggle theme"
+      suppressHydrationWarning
+    >
       {theme === "light" ? "Dark" : "Light"}
     </button>
   );

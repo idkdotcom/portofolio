@@ -6,23 +6,30 @@
 
 .inner {
   width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
   padding: 1.25rem 2rem;
-
   display: flex;
   align-items: center;
+  gap: 1.5rem;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1.25rem 1.5rem;
-
+.brand {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.brandText {
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
 .navList {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   list-style: none;
   padding: 0;
@@ -34,10 +41,8 @@
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--foreground);
-
   padding: 0.4rem 0.75rem;
   border-radius: 6px;
-
   transition: background-color 0.15s ease;
 }
 
@@ -45,18 +50,27 @@
   background-color: var(--surface-hover);
 }
 
-.linkActive {
-  background-color: var(--surface-hover);
-}
-
 .left {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+  flex-wrap: wrap;
 }
 
 .right {
   margin-left: auto;
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 860px) {
+  .inner {
+    padding: 1rem;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .right {
+    margin-left: 0;
+  }
 }

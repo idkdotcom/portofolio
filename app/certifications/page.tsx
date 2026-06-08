@@ -4,21 +4,39 @@ import styles from "./certifications.module.css";
 export default function CertificationsPage() {
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>Certifications</h1>
+      <section className={styles.hero}>
+        <p className={styles.eyebrow}>Certifications</p>
+        <h1 className={styles.title}>Formal coursework backing core skills.</h1>
+        <p className={styles.description}>
+          Supporting coursework focused on web and mobile development
+          fundamentals, with emphasis on practical implementation.
+        </p>
+      </section>
 
-      {certifications.map((cert) => (
-        <section key={cert.title} className={styles.section}>
-          <h2 className={styles.subtitle}>{cert.title}</h2>
-          <p className={styles.provider}>{cert.provider}</p>
-          <p className={styles.summary}>{cert.summary}</p>
-          <p className={styles.scope}>
-            <strong>Scope:</strong> {cert.scope.join(", ")}
-          </p>
-          <a href={cert.link} target="_blank" className={styles.button}>
-            View Certificate
-          </a>
-        </section>
-      ))}
+      <section className={styles.grid}>
+        {certifications.map((cert) => (
+          <article key={cert.title} className={styles.section}>
+            <p className={styles.provider}>{cert.provider}</p>
+            <h2 className={styles.subtitle}>{cert.title}</h2>
+            <p className={styles.summary}>{cert.summary}</p>
+            <div className={styles.scopeList}>
+              {cert.scope.map((item) => (
+                <span key={item} className={styles.scopeTag}>
+                  {item}
+                </span>
+              ))}
+            </div>
+            <a
+              href={cert.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.button}
+            >
+              View Certificate
+            </a>
+          </article>
+        ))}
+      </section>
     </main>
   );
 }

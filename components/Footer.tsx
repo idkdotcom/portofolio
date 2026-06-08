@@ -1,11 +1,8 @@
+import styles from "./Footer.module.css";
+
 export default function Footer() {
   return (
-    <footer
-      style={{
-        textAlign: "center",
-        padding: "1rem 0",
-      }}
-      >
+    <footer className={styles.footer}>
       <p>© {new Date().getFullYear()} Bryan Tanjaya</p>
     </footer>
   );
